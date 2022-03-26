@@ -1,0 +1,58 @@
+.experience_container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.experience_container > div {
+  background-color: var(--color-bg-variant);
+  padding: 2.5rem;
+  border-radius: 1.2rem;
+  border: 1px solid transparent;
+  width: calc(100% / 3 - 50px);
+  transition: .4s all;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.experience_container > div img {
+  width: 75%;
+}
+
+.experience_container > div:hover {
+  background: transparent;
+  border-color: var(--color-primary-variant);
+  cursor: default;
+  transform: rotate(3deg) scale(1.1);
+  box-shadow: 0px 0px 15px 4px rgb(67 210 251 / 20%);
+}
+
+.experience_container > div h3 {
+  color: #fff;
+  transition: .4s all;
+  margin-top: 10px;
+}
+.experience_container > div:hover h3 {
+  color: var(--color-primary);
+} 
+
+@media screen and (max-width: 1024px) {
+  .experience_softskill, .experience_frontend {
+    margin-bottom: 20px;
+  }
+  .experience_container > div {
+    width: calc(100% / 2 - 30px);
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .experience_container > div {
+    width: calc(100% / 4 - 30px);
+  }
+  .experience_container {
+    justify-content: space-evenly;
+  }
+}
